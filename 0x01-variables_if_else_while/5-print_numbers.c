@@ -18,5 +18,6 @@ int main(void)
 		printf("%d", numbers);
 		numbers++;
 	}
+	putchar('\n');
 	return (0);
 }
