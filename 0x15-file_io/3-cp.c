@@ -42,7 +42,7 @@ int main(int argc, char **argv)
 		if (fd2 == -1 || w == -1)
 		{
 			dprintf(STDERR_FILENO,
-					"Error: Can't write to %s",
+					"Error: Can't write to %s\n",
 					argv[2]);
 			free(buff);
 			exit(99);
@@ -72,7 +72,7 @@ char *create_buff(char *str)
 
 	if (buff == NULL)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s",
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n",
 				str);
 		exit(99);
 	}
@@ -92,7 +92,7 @@ void close_file(int fd)
 
 	if (c == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d", fd);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 		exit(100);
 	}
 }
