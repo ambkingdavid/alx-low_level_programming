@@ -27,7 +27,7 @@ int main(int argc, char **argv)
 	buff = create_buff(argv[2]);
 	fd1 = open(argv[1], O_RDONLY);
 	r = read(fd1, buff, 1024);
-	fd2 = open(argv[2], O_CREAT | O_RDWR | O_TRUNC, 0664);
+	fd2 = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
 	do {
 		if (fd1 == -1 || r == -1)
